@@ -24,6 +24,16 @@
                 <input type="submit" name="submit" value="Submit" class="btn btn-info">
             </div>
         </form>
+        <h2 class="text-center text-danger">Create table</h2>
+        <table class="table table-bordered">
+             <tr class="bg-primary text-center">
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Action</th>
+             </tr>  
+     </div>
+        </table>
     </div>
 </body>
 </html>
