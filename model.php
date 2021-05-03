@@ -13,11 +13,21 @@
          if($this->conn->connect_error){
              echo 'Connection Failed';
          }else{
-             echo 'Connected';
+             return $this->conn;
+         }
+     }
+
+     /*function defie for insert table */
+     public function insertTable($post){
+         $name = $post['name'];
+         $email = $post['email'];
+         $sql = "INSERT INTO users(name,email)VALUES('$name','$email')";
+         $result = $this->conn->query($sql);
+         if($result){
+             header('location:index.php?msg=ins');
+         }else{
+             echo "Error".$sql."<br>".$this->conn->error;
          }
      }
 }
-
-new Model();
-
 ?>

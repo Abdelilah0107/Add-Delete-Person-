@@ -1,3 +1,11 @@
+<?php
+include 'model.php';
+$obj = new Model();
+if(isset($_POST['submit'])){
+     $obj->insertTable($_POST);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
