@@ -45,8 +45,14 @@
 // function define for delete
 
     public function deleteTable($delid){
-        $sql = "DELET FROM users WHERE id='$delid'"
-        $result = 
+        // $sql = "DELET FROM users WHERE id='$delid'";
+        $sql = "DELETE FROM `users` WHERE `users`.`id` = '$delid'";
+        $result = $this->conn->query($sql);
+        if($result){
+            header('location:index.php?msg=del');
+        }else{
+            echo "Error".$sql."<br>".$this->conn->error;
+        }
     }
 
 

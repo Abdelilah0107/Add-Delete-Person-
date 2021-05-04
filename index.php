@@ -44,6 +44,12 @@ if(isset($_GET['deleteid'])){
              Table Updated Successfully..!
              </div>';
     }
+    if(isset($_GET['msg']) AND $_GET['msg']=='del'){
+        echo '<div class="alert alert-primary" role="alert">
+             Table Deleted Successfully..!
+             </div>';
+    }
+
     ?>
     <?php
           // Update
